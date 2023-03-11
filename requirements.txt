@@ -1,1 +1,2 @@
 Pillow==9.4.0
+colored==1.4.4
