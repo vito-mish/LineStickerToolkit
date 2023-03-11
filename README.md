@@ -43,9 +43,6 @@ python main.py
 
 ## Dev note
 
-TODO: 刪除腳本 - outputs/images
-TODO: 刪除腳本 - outputs all
-TODO: 刪除腳本 - inputs/images
 TODO: 自動亂選 8 (01 ~ 08) + 2 (main + tab)
 TODO: 自動亂選 16、24、32、40
 TODO: 使用說明

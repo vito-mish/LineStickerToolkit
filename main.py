@@ -1,13 +1,18 @@
 from colored import attr, bg, fg
 
+from modules.config import folder_path
 from modules.init import init_folder_path
+from modules.scripts.cleaner import delete_file, delete_input_images
 from modules.scripts.merge import merge_command
 from modules.scripts.png_separator import run_image_separate
 from modules.theme import colors
 
 options = [
-    "1. 合併 Midjourney command",
-    "2. 分離 Midjourney 圖片 (1 to 4)",
+    "[1] 合併 Midjourney command",
+    "[2] 分離 Midjourney 圖片 (1 to 4)",
+    "[d1] 清除 assets/outputs/images",
+    "[d2] 清除 assets/outputs",
+    "[d3] 清除 assets/inputs/*.png",
     "(enter 'q' to exit)",
 ]
 
@@ -25,6 +30,12 @@ def switch_script_by_id(id):
         merge_command()
     elif id == "2":
         run_image_separate()
+    elif id == "d1":
+        delete_file(folder_path["output_images"])
+    elif id == "d2":
+        delete_file(folder_path["output"])
+    elif id == "d3":
+        delete_input_images()
     elif id in ["q", "Q"]:
         pass
     else:
