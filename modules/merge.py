@@ -1,8 +1,9 @@
 from typing import List
 
+from modules.config import folder_path
 
-path_input = "assets/inputs/command"
-path_output = "assets/outputs"
+path_input = folder_path["input_command"]
+path_output = folder_path["output"]
 
 
 def merge_command():

@@ -1,12 +1,17 @@
+import os
+
+from colored import attr, fg
 from PIL import Image
 
-path_input = "assets/inputs/images"
-path_output = "assets/outputs/images"
+from modules.config import folder_path
+from modules.theme import colors
+
+path_input = folder_path["input_images"]
+path_output = folder_path["output_images"]
 
 
-def run_image_separate():
-    print("run_image_separate start")
-    image = Image.open(f"{path_input}/input.png")
+def separate_by_path(path: str) -> None:
+    image = Image.open(path)
     width, height = image.size
     half_width = int(width * 0.5)
     half_height = int(height * 0.5)
@@ -29,4 +34,15 @@ def run_image_separate():
         file_name = f"{path_output}/cropped_{index + 1}.png"
         cropped_image = image.crop((tuple(coord)))
         cropped_image.save(file_name)
-    print("run_image_separate end")
+
+
+def run_image_separate():
+    print("run_image_separate start")
+    items = os.listdir(path_input)
+    for item in items:
+        if not item.endswith(".png"):
+            # print(fg(colors["error"][0]) + f"[filename: {item}] is not .png file.") # ! for debug
+            continue
+        print(fg(colors["success"][0]) + f"[filename: {item}] in progress......")
+        separate_by_path(f"{path_input}/{item}")
+    print(attr("reset") + "\nrun_image_separate end")

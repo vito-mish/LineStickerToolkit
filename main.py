@@ -1,7 +1,9 @@
+from colored import attr, bg, fg
+
+from modules.init import init_folder_path
 from modules.merge import merge_command
-from colored import fg, bg, attr
-from modules.theme import colors
 from modules.png_separator import run_image_separate
+from modules.theme import colors
 
 options = [
     "1. 合併 Midjourney command",
@@ -30,6 +32,7 @@ def switch_script_by_id(id):
 
 
 if __name__ == "__main__":
+    init_folder_path()
     print_options()
     id = input()
     print(bg(colors["success"][0]) + f"開始執行腳本：{id}" + attr("reset"), end="\n\n")
