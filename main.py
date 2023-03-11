@@ -1,8 +1,8 @@
 from colored import attr, bg, fg
 
 from modules.init import init_folder_path
-from modules.merge import merge_command
-from modules.png_separator import run_image_separate
+from modules.scripts.merge import merge_command
+from modules.scripts.png_separator import run_image_separate
 from modules.theme import colors
 
 options = [
