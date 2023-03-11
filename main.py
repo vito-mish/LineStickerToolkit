@@ -8,7 +8,7 @@ from modules.theme import colors
 options = [
     "1. 合併 Midjourney command",
     "2. 分離 Midjourney 圖片 (1 to 4)",
-    "(enter 'q' to exit.)",
+    "(enter 'q' to exit)",
 ]
 
 
@@ -37,4 +37,4 @@ if __name__ == "__main__":
     id = input()
     print(bg(colors["success"][0]) + f"開始執行腳本：{id}" + attr("reset"), end="\n\n")
     switch_script_by_id(id)
-    print("程式結束")
+    print("\n--exit--")

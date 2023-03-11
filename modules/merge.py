@@ -1,6 +1,7 @@
 from typing import List
 
 from modules.config import folder_path
+from modules.utils import open_folder
 
 path_input = folder_path["input_command"]
 path_output = folder_path["output"]
@@ -26,3 +27,4 @@ def merge_command():
         for body in body_list:
             file.write(f"{prefix} {body}{suffix}\n")
     print("merge_command end")
+    open_folder(path_output)

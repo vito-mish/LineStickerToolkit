@@ -1,5 +1,6 @@
 import os
-import uuid
+import random
+import string
 from typing import List
 
 from colored import attr, fg
@@ -7,21 +8,25 @@ from PIL import Image
 
 from modules.config import folder_path
 from modules.theme import colors
+from modules.utils import open_folder
 
 path_input = folder_path["input_images"]
 path_output = folder_path["output_images"]
+
+
+def generate_random_str(n: int) -> str:
+    return "".join(random.choices(string.ascii_letters + string.digits, k=n))
 
 
 def create_ids(n: int) -> List[str]:
     id_list: List[str] = []
     for _ in range(n):
         while True:
-            new_id = str(uuid.uuid4())
+            new_id = generate_random_str(9)
             if new_id not in id_list:
                 id_list.append(new_id)
                 break
         print(f"new_id = {new_id}")
-
     return id_list
 
 
@@ -46,8 +51,9 @@ def separate_by_path(path: str, id: str) -> None:
         append_coord(*item)
 
     for index, coord in enumerate(coords):
-        file_name = f"{path_output}/{id}_cropped_{index + 1}.png"
+        file_name = f"{path_output}/{id}_{index + 1}.png"
         cropped_image = image.crop((tuple(coord)))
+        cropped_image = cropped_image.resize(size=(320, 320))
         cropped_image.save(file_name)
 
 
@@ -65,3 +71,4 @@ def run_image_separate():
             id=id_list[index],
         )
     print(attr("reset") + "\nrun_image_separate end")
+    open_folder(path_output)
