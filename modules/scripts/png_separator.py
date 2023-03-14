@@ -60,11 +60,9 @@ def separate_by_path(path: str, id: str) -> None:
 def run_image_separate():
     print("run_image_separate start")
     items = os.listdir(path_input)
+    items = list(filter(lambda x: x.endswith(".png"), items))
     id_list = create_ids(len(items))
     for index, item in enumerate(items):
-        if not item.endswith(".png"):
-            # print(fg(colors["error"][0]) + f"[filename: {item}] is not .png file.") # ! for debug
-            continue
         print(fg(colors["success"][0]) + f"[filename: {item}] in progress......")
         separate_by_path(
             path=f"{path_input}/{item}",

@@ -4,15 +4,24 @@ from modules.config import folder_path
 from modules.init import init_folder_path
 from modules.scripts.cleaner import delete_file, delete_input_images
 from modules.scripts.merge import merge_command
+from modules.scripts.png_auto_pack import run_auto_pack
 from modules.scripts.png_separator import run_image_separate
 from modules.theme import colors
+from modules.utils import open_folder
 
 options = [
+    "[0] 打開 assets/inputs",
     "[1] 合併 Midjourney command",
     "[2] 分離 Midjourney 圖片 (1 to 4)",
-    "[d1] 清除 assets/outputs/images",
-    "[d2] 清除 assets/outputs",
-    "[d3] 清除 assets/inputs/*.png",
+    "\n",
+    "[p1] 自動挑選：隨機挑選 8 張",
+    "[p2] 自動挑選：隨機挑選 16 張",
+    "[p3] 自動挑選：隨機挑選 24 張",
+    "\n",
+    "[d1] 刪除 assets/outputs/images",
+    "[d2] 刪除 assets/outputs",
+    "[d3] 刪除 assets/inputs/*.png",
+    "\n",
     "(enter 'q' to exit)",
 ]
 
@@ -26,10 +35,18 @@ def print_options():
 
 
 def switch_script_by_id(id):
-    if id == "1":
+    if id == "0":
+        open_folder(folder_path["input_images"])
+    elif id == "1":
         merge_command()
     elif id == "2":
         run_image_separate()
+    elif id == "p1":
+        run_auto_pack()
+    elif id == "p2":
+        run_auto_pack(16)
+    elif id == "p3":
+        run_auto_pack(24)
     elif id == "d1":
         delete_file(folder_path["output_images"])
     elif id == "d2":
@@ -39,13 +56,20 @@ def switch_script_by_id(id):
     elif id in ["q", "Q"]:
         pass
     else:
-        print(fg(colors["error"][0]) + "Command not found" + attr("reset"))
+        print(fg(colors["error"][0]) + "Error: Command not found" + attr("reset"))
 
 
-if __name__ == "__main__":
+def start():
     init_folder_path()
     print_options()
     id = input()
     print(bg(colors["success"][0]) + f"開始執行腳本：{id}" + attr("reset"), end="\n\n")
     switch_script_by_id(id)
+    return id
+
+
+if __name__ == "__main__":
+    id = None
+    while id not in ["q", "Q"]:
+        id = start()
     print("\n--exit--")

@@ -13,9 +13,8 @@ def delete_input_images():
     print("delete_input_images start")
     path_images = folder_path["input_images"]
     items = os.listdir(path_images)
+    items = list(filter(lambda x: x.endswith(".png"), items))
     for item in items:
-        if not item.endswith(".png"):
-            continue
         path = f"{path_images}/{item}"
         print(f"os.remove path = {path}")
         os.remove(path)

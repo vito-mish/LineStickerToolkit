@@ -2,7 +2,13 @@
 
 A command-line tool for converting Line stickers into various image formats.
 
-## Install
+## Requirements
+
+This project requires Python 3.8 or later to run. You can download the latest version of Python from the [official website](https://www.python.org/downloads/).
+
+## Installation
+
+python
 
 ```shell
 pip install -r requirements.txt
@@ -14,7 +20,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-## Project tree
+## Directory Structure
 
 ```
 ├── README.md
@@ -43,8 +49,6 @@ python main.py
 
 ## Dev note
 
-TODO: 自動亂選 8 (01 ~ 08) + 2 (main + tab)
-TODO: 自動亂選 16、24、32、40
 TODO: 使用說明
 
 https://pixlr.com/tw/e/
