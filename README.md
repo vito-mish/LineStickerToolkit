@@ -32,18 +32,23 @@ python main.py
 │   │   │   ├── prefix.txt
 │   │   │   └── suffix.txt
 │   │   └── images
-│   │       └── input.png
+│   │       ├── README.md
+│   │       ├── **.png
 │   └── outputs
-│       ├── full-command.txt
 │       └── images
-│           ├── cropped_1.png
-│           ├── cropped_2.png
-│           ├── cropped_3.png
-│           └── cropped_4.png
 ├── main.py
-├── merge.py
 ├── modules
-├── png_separator.py
+│   ├── __init__.py
+│   ├── config.py
+│   ├── init.py
+│   ├── scripts
+│   │   ├── __init__.py
+│   │   ├── cleaner.py
+│   │   ├── merge.py
+│   │   ├── png_auto_pack.py
+│   │   └── png_separator.py
+│   ├── theme.py
+│   └── utils.py
 └── requirements.txt
 ```
 
