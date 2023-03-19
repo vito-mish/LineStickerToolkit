@@ -32,7 +32,9 @@ python main.py
 8. 將所有圖片放到 assets/inputs/images/ 目錄底下
 9. 執行 `python main.py` 輸入「2」執行切分腳本
 10. 可以選擇手動挑選圖片，或執行 `python main.py` 輸入「p1」~「p3」自動隨機選取官方指定數量
-11. 用無痕視窗開啟 https://pixlr.com/tw/e/ 這個網站進行簡單後製
+11. 手動編輯圖片
+    1. 去背：https://express.adobe.com/zh-Hant-TW/tools/remove-background
+    2. 用無痕視窗開啟 https://pixlr.com/tw/e/ 上文字
 
 ## Directory Structure
 

@@ -1,10 +1,10 @@
-Expression: Brave, Action: Battling a dragon, Attire: Full armor, Coat: Golden fur, Breed: Samoyed
-Expression: Mischievous, Action: Stealing a treasure, Attire: Black hoodie, Coat: Gray fur, Breed: Siamese
-Expression: Romantic, Action: Holding a bouquet of flowers, Attire: Elegant gown, Coat: White fur, Breed: Persian
-Expression: Sleepy, Action: Napping on a pile of hay, Attire: Simple tunic, Coat: Brown fur, Breed: Scottish Fold
-Expression: Adventurous, Action: Exploring a forest, Attire: Explorer outfit, Coat: Black and white fur, Breed: Siberian Husky
-Expression: Energetic, Action: Jumping over hurdles, Attire: Sports jersey, Coat: Brindle fur, Breed: Boxer
-Expression: Curious, Action: Investigating a mysterious object, Attire: Detective hat and coat, Coat: Tabby fur, Breed: British Shorthair
-Expression: Confident, Action: Leading a charge into battle, Attire: Chainmail armor, Coat: Orange fur, Breed: Bengal
-Expression: Excited, Action: Celebrating a victory, Attire: Party hat and confetti, Coat: Black fur, Breed: Bombay
-Expression: Regal, Action: Sitting on a throne, Attire: Royal robes, Coat: Red and white fur, Breed: Ragdoll
+Expression: Excited, Action: Hugging a honey jar, Attire: Bee antennae, Coat: Black fur, Breed: American black bear
+Expression: Hungry, Action: Eating bamboo shoots, Attire: Chef's hat, Coat: Black and white fur, Breed: Giant panda
+Expression: Mischievous, Action: Stealing picnic baskets, Attire: Thief mask, Coat: Brown fur, Breed: Grizzly bear
+Expression: Sleepy, Action: Napping in a hammock, Attire: Sleep mask, Coat: Brown fur, Breed: Sloth bear
+Expression: Happy, Action: Jumping for joy, Attire: Party hat, Coat: White fur, Breed: Polar bear
+Expression: Curious, Action: Investigating a beehive, Attire: Safari hat, Coat: Blonde fur, Breed: European brown bear
+Expression: Grumpy, Action: Growling, Attire: "Do not disturb" sign, Coat: Black fur, Breed: Asiatic black bear
+Expression: Relaxed, Action: Lounging in a hot spring, Attire: Sunglasses, Coat: Brown fur, Breed: Kodiak bear
+Expression: Excited, Action: Playing with a ball, Attire: Sports jersey, Coat: Brown fur, Breed: Spectacled bear
+Expression: Pensive, Action: Sitting on a log, Attire: Thinking cap, Coat: Red fur, Breed: Sloth bear
