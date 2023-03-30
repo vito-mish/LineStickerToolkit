@@ -35,6 +35,10 @@ python main.py
 11. 手動編輯圖片
     1. 去背：https://express.adobe.com/zh-Hant-TW/tools/remove-background
     2. 用無痕視窗開啟 https://pixlr.com/tw/e/ 上文字
+    3. 成本 Size
+       - 01-08 [320x320]
+       - Main [240x240]
+       - Tab [96x74]
 
 ## Directory Structure
 
